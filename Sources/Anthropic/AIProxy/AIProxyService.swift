@@ -5,6 +5,7 @@
 //  Created by Lou Zell on 7/31/24.
 //
 
+#if !os(Linux)
 import Foundation
 
 private let aiproxySecureDelegate = AIProxyCertificatePinningDelegate()
@@ -110,5 +111,4 @@ struct AIProxyService: AnthropicService {
       return try await fetchStream(type: TextCompletionStreamResponse.self, with: request, debugEnabled: debugEnabled)
    }
 }
-
-
+#endif

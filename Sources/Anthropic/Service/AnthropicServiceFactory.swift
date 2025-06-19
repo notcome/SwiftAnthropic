@@ -39,6 +39,8 @@ public final class AnthropicServiceFactory {
          debugEnabled: debugEnabled)
    }
 
+
+  #if !os(Linux)
    /// Creates and returns an instance of `AnthropicService`.
    ///
    /// - Parameters:
@@ -73,5 +75,5 @@ public final class AnthropicServiceFactory {
          betaHeaders: betaHeaders,
          debugEnabled: debugEnabled)
    }
-
+  #endif
 }
